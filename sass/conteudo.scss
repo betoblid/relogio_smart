@@ -1,13 +1,13 @@
 @import "variaveis.scss";
 
 .container_relogio{
-    background: $white;
+    
     //alinhando o conteudo no meio da tela
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
-
+    min-height: 100vh;
     //estilizando o primeiro card da tela onde tera aepans as horas.
 
     .card_time{

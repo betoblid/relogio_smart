@@ -50,12 +50,25 @@ function hours(){
     //pegando ano e montando para retorna pro DOM.
     let dia = data.getDate();
     let mes = data.getMonth() + 1;
-    yea.textContent = `${dia < 10 ? "0" + dia : dia }/${mes < 10 ? "0" + mes : mes}/${data.getFullYear()}`
 
+
+    //uma condição para validar se está acabando o mes ou não
+    if(dia <= 12){
+        yea.style.color = "hsl(140, 100%, 50%)"
+    }else if(dia <= 24){
+        yea.style.color = "hsl(36, 100%, 50%)"
+    }else{
+        yea.style.color = "hsl(342, 100%, 50%)"
+    }
+
+    yea.textContent = `${dia < 10 ? "0" + dia : dia }/${mes < 10 ? "0" + mes : mes}/${data.getFullYear()}`
 
     //chamando functions responsavel pela semana e o ano.
     sem.textContent = semans(data.getDay());
+    //chamando a function responsavel por passar temperatura local e humidade do AR.
     getUserPosition()
+    //function responsavel por validar a cor do fundo da aplicação
+    dark(hours)
 }
 setInterval(hours, 1000)
 
@@ -89,12 +102,8 @@ function semans(semana){
     }
 
 }
-
 //function onde pega dados de uma api e traz pro dom.
-
-
 //{API key}
-
 function getUserPosition() {
     let url = ''
     navigator.geolocation.getCurrentPosition((pos) => {
@@ -129,4 +138,17 @@ function fetchApi(url){
         city.innerText = `Impossível acessar o OpenWeather. Verifique a sua conexão.`;
         temperature.innerHTML = `-`;
     })
+}
+//essa function só checará a hora e trocara a cor do BODY.
+function dark(hora){
+
+    if(hora <= 6){
+        document.body.style.background = "hsl(5, 5%, 20%)";
+    }else if(hora > 6 && hora <= 13){
+        document.body.style.background = "hsl(100, 100%, 70%)"
+    }else if(hora > 13 && hora <= 18){
+        document.body.style.background = "hsl(30, 100%, 65%)"
+    }else{
+        document.body.style.background = "#1f2646e1"
+    }
 }
