@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="site responsavel por te manter informado na temperatura atual e horario atual">
+    <meta name="author" content="herbert souza">
+    <meta name="robots" content="index follow">
+    <title>Smart Web</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="container_relogio">
+        <!--card que contera horas minutos e segungos-->
+        <div class="card_time">
+            <article>
+                <span id="hours">11</span><span class="efect_ponter">:</span>
+                <span id="minuter">50</span><span class="efect_ponter">:</span>
+                <span id="seguntes">22</span>
+            </article>
+        </div>
+
+        <!--card relogio smart onde tera todas as informações que um relogio atualmente possui-->
+        <div class="card_smart">
+            <div class="card_time_smart">
+                <article>
+                    <span id="shours">20</span><span class="efect_ponter ponteiro">:</span>
+                    <span id="sminuter">25</span><span class="efect_ponter ponteiro">:</span>
+                    <span id="sseguntes">50</span>
+                </article>
+                <article>
+                    <p><span id="semana">Qui</span> <span id="full_years">20/11/2023</span></p>
+                </article>
+
+                <article>
+                    <p><span id="local_geometric">sao paulo</span></p>
+                    <p><span id="graus">🌡32</span> <span id="qualidade_ar">💧70%</span></p>
+                </article>
+            </div>
+        </div>
+
+    </div>
+
+    <script src="script/function.js"></script>
+</body>
+</html>

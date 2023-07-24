@@ -1,0 +1,89 @@
+@import "variaveis.scss";
+
+.container_relogio{
+    background: $white;
+    //alinhando o conteudo no meio da tela
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+
+    //estilizando o primeiro card da tela onde tera aepans as horas.
+
+    .card_time{
+        margin: 20px auto;
+        background: $black;
+        color: $white;
+        padding: 20px;
+        border-radius: 20px;
+        box-shadow: 0 0 8px 6px rgb(187, 183, 183);
+
+        article{
+            //efeito dos spans que será ele responsavel por mostra as horas. passado em js.
+            span{
+                font: 600 36px Arial;
+                margin-left: 10px;
+            }
+        }
+
+    }
+
+    //efeito do relogio smart.
+    .card_smart{
+        background: $black;
+        padding: 30px 20px;
+        color: $white;
+        text-align: center;
+        border-radius: 20px;
+        box-shadow: 0 0 8px 6px rgb(187, 183, 183);
+
+        //div que agrupa os articles de acordo com o tema.
+        .card_time_smart{
+            
+
+            article{
+                margin: 10px auto;
+                
+    
+                //estilo de horas e minutos
+                #shours, #sminuter, .ponteiro{
+                    font: 600 40px Arial;
+                    margin-left: 10px;
+                    color: $cyan;
+                   
+                }
+                #sseguntes{
+                    font: 500 20px Arial;
+                    margin-left: 10px;
+                    color: $cyan;
+                }
+
+                //efeito do ano.
+                #semana{
+                    color: $green_light;
+                    font: 600 20px Arial;
+                    letter-spacing: 3px;
+                 
+                }
+                #full_years{
+                    font: 600 20px Arial;
+                    letter-spacing: 3px;
+                    margin-left: 10px;
+                    color: $pink_roxo;
+                 
+                }
+
+                #local_geometric{
+                    font: 700 18px Arial;
+                }
+
+                #graus, #qualidade_ar{
+                    font: 700 15px Arial;
+                    letter-spacing: 3px;
+                    
+                }
+            }
+        
+        }
+    }
+}

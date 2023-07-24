@@ -1,0 +1,29 @@
+
+
+$black: hsl(0, 2%, 12%);
+
+$cyan: hsl(184, 100%, 50%);
+
+$green_light: hsl(103, 94%, 49%);
+
+$pink_roxo: hsl(298, 100%, 50%);
+
+$white: #fff;
+
+
+//efeito global dos pontos piscando
+//coloquei aqui para melhor manutenção do codigo.
+
+.efect_ponter{
+
+    animation: ponteiro 1s infinite;
+}
+
+@keyframes ponteiro{
+    0%{
+        opacity: 0;
+    }
+    50%,100%{
+        opacity: 1;
+    }
+}
